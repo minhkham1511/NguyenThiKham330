@@ -13,4 +13,6 @@ using NguyenThiKham330.Model;
         }
 
         public DbSet<NguyenThiKham330.Model.UniversityNTK330> UniversityNTK330 { get; set; } = default!;
+
+        public DbSet<NguyenThiKham330.Model.NTK0330> NTK0330 { get; set; } = default!;
     }

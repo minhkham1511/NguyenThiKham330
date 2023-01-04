@@ -1,4 +1,4 @@
-@model NguyenThiKham330.Model.UniversityNTK330
+@model NguyenThiKham330.Model.NTK0330
 
 @{
     ViewData["Title"] = "Create";
@@ -6,21 +6,21 @@
 
 <h1>Create</h1>
 
-<h4>UniversityNTK330</h4>
+<h4>NTK0330</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="UniversityId" class="control-label"> Mã </label> 
-                <input asp-for="UniversityId" class="form-control" />
-                <span asp-validation-for="UniversityId" class="text-danger"></span>
+                <label asp-for="NTKName" class="control-label"> TênSV </label>
+                <input asp-for="NTKName" class="form-control" />
+                <span asp-validation-for="NTKName" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="UniversityName" class="control-label"> Tên </label>
-                <input asp-for="UniversityName" class="form-control" />
-                <span asp-validation-for="UniversityName" class="text-danger"></span>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="NTKGender" /> @Html.DisplayNameFor(model => model.NTKGender)
+                </label>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

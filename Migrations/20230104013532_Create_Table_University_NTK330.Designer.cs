@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace NguyenThiKham330.Migrations
 {
     [DbContext(typeof(LTQLDb))]
-    [Migration("20230104012640_Create_Table_University_NTK330")]
+    [Migration("20230104013532_Create_Table_University_NTK330")]
     partial class CreateTableUniversityNTK330
     {
         /// <inheritdoc />
@@ -20,10 +20,9 @@ namespace NguyenThiKham330.Migrations
 
             modelBuilder.Entity("NguyenThiKham330.Model.UniversityNTK330", b =>
                 {
-                    b.Property<int>("UniversityId")
-                        .ValueGeneratedOnAdd()
+                    b.Property<string>("UniversityId")
                         .HasMaxLength(20)
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("UniversityName")
                         .HasMaxLength(50)

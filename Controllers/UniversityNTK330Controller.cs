@@ -27,7 +27,7 @@ namespace NguyenThiKham330.Controllers
         }
 
         // GET: UniversityNTK330/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(string id)
         {
             if (id == null || _context.UniversityNTK330 == null)
             {
@@ -67,7 +67,7 @@ namespace NguyenThiKham330.Controllers
         }
 
         // GET: UniversityNTK330/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(string id)
         {
             if (id == null || _context.UniversityNTK330 == null)
             {
@@ -87,7 +87,7 @@ namespace NguyenThiKham330.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("UniversityId,UniversityName")] UniversityNTK330 universityNTK330)
+        public async Task<IActionResult> Edit(string id, [Bind("UniversityId,UniversityName")] UniversityNTK330 universityNTK330)
         {
             if (id != universityNTK330.UniversityId)
             {
@@ -118,7 +118,7 @@ namespace NguyenThiKham330.Controllers
         }
 
         // GET: UniversityNTK330/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(string id)
         {
             if (id == null || _context.UniversityNTK330 == null)
             {
@@ -138,7 +138,7 @@ namespace NguyenThiKham330.Controllers
         // POST: UniversityNTK330/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(string id)
         {
             if (_context.UniversityNTK330 == null)
             {
@@ -154,7 +154,7 @@ namespace NguyenThiKham330.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool UniversityNTK330Exists(int id)
+        private bool UniversityNTK330Exists(string id)
         {
           return (_context.UniversityNTK330?.Any(e => e.UniversityId == id)).GetValueOrDefault();
         }
